@@ -32,6 +32,7 @@ header{
     position: sticky;
     top: 0;
     background-color: #30204E;
+    z-index: 1000;
 }
 
 nav{
@@ -45,9 +46,18 @@ header a, nav a, article a{
     font-weight: 600;
 }
 
-header a, nav a:hover, nav a:focus, article a:hover, article a:focus{
+a:any-link{
     color: #FF6F91;
 }
+
+a:active{
+    color: #E6E481;
+}
+
+nav a:hover, nav a:focus, article a:hover, article a:focus{
+    color: #70FF77;
+}
+
 
 .intro, .about, .experience, .projects, .education{
     padding: 2em 1em;
@@ -105,4 +115,74 @@ article h2{
     position: absolute;
     left: 0;
     color: #FF6F91;
+}
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.experience ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience ul li{
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+}   
+.experience ul li::before{
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #FF6F91;
+}
+
+.experience__1, .experience__2 {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.experience h3{
+    display: block;
+    color: #70FF77;
+    white-space: nowrap;
+}
+
+.break {
+    display: block;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.projects ul{
+    list-style-type: none;
+    padding-left: 0;
+    columns: 2;
+} 
+
+.projects ul li{
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+}   
+.projects ul li::before{
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #FF6F91;
+}
+
+footer{
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9rem;
+    color: #c5c36f;
 }
