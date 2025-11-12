@@ -35,6 +35,14 @@ header{
     z-index: 1000;
 }
 
+header h2{
+    font-size: 1em;
+}
+
+header nav{
+    font-size: 0.9em;
+}
+
 nav{
     display: flex;
     gap: 1em;  
@@ -48,10 +56,6 @@ header a, nav a, article a{
 
 a:any-link{
     color: #FF6F91;
-}
-
-a:active{
-    color: #E6E481;
 }
 
 nav a:hover, nav a:focus, article a:hover, article a:focus{
@@ -79,7 +83,8 @@ article{
 
 article h2{
     font-size: 2rem;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     color: #70FF77;
 }
 
@@ -186,3 +191,59 @@ footer{
     font-size: 0.9rem;
     color: #c5c36f;
 }
+
+.intro-container{
+    display: inline-block;
+}
+
+.intro__h2{
+    font-size: 4.5rem;
+    letter-spacing: px;
+    border-right: 5px solid #E6E481;
+    border-radius: 3px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+            typing 3s steps(20),
+            cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+    50%{
+        border-color: transparent;
+    }
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+
+img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}  
+
+/* @media (max-width: 600px){
+    .about__content{
+        flex-direction: column;
+    }
+
+    img{
+        display: none;
+    }
+
+    .about__content .words ul{
+        columns: 1;
+    }
+
+    .experience__1, .experience__2 {
+        flex-direction: column;
+    }
+
+    .projects ul{
+        columns: 1;
+    }
+} */
